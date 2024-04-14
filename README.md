@@ -13,7 +13,7 @@ This is a Django-based web application for predicting cardiovascular disease ris
 ## Screenshots
 
 ### Signup Page
-![Signup Page](images\registration_page.png)
+![Signup Page](images\signup_page.png)
 
 ### Login Page
 ![Login Page](images/login_page.png)
