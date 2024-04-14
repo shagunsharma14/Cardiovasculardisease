@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <title>Login</title>
+        <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+    </head>
+    <style>
+        #image {
+            background-image: url("{% static 'login.jpeg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+    </style>
+    </head>
+    <body id="image">
+    <body class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4"><br><br><br><br><br>
+                    <h1>             Login Page</h1><br>
+                    <form action="/loginuser/" method="post">
+                        {% csrf_token %}
+                        <input type="text" class="form-group form-control" 
+                        name="lusername" id="username" placeholder="Username" />
+                        <input type="password" class="form-group form-control" 
+                        name="lpassword" id="password" placeholder="Password" />
+                        <button class="btn btn-success form-group form-control" type="submit">Login</button>
+                        <a href="/reg/" class="btn btn-warning form-group form-control">Sign Up</a>
+                    </form>
+                </div>
+                <div class="col-4"></div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

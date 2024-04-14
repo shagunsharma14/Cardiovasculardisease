@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <title>Result Page</title>
+        <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+    </head>
+    <body class="bg-info">
+        <div class="container">
+            <div class="card" style="width: 100%; height: 100px; margin-top: 100px;">
+                {% if result == "You have Cardiovascular disease" %}
+                    <h1 class="text-danger" style="text-align: center;">{{result}}</h1>
+                {% endif %}
+                {% if result == "You are Normal" %}
+                    <h1 class="text-success" style="text-align: center;">{{result}}</h1>
+                {% endif %}
+            </div>
+            <a href='/login/' class="btn btn-success form-group form-control">Back</a>   
+        </div>
+
+    </body>
+</html>

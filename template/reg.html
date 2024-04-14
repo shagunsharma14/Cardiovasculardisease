@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <title>Registration</title>
+        <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+        <style>
+            #imager {
+                background-image: url("{% static 'Register.jpeg' %}");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        
+        </style>
+        <body id="imager">
+    </head>
+    <body class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"><br><br><br><br><br><br>
+                    <h1>Registration Page</h1><br>
+                    <form action="/saveuser/" method="post">
+                        {% csrf_token %}
+                        <input type="text" class="form-group form-control" 
+                        name="rname" id="name" placeholder="Name" />
+                        <input type="email" class="form-group form-control" 
+                        name="remail" id="email" placeholder="Email" />
+                        <textarea type="text" class="form-group form-control" 
+                        name="raddress" id="address" placeholder="Address"></textarea>
+                        <input type="number" class="form-group form-control" 
+                        name="rpnum" id="pnum" placeholder="Phone Number" />
+                        <input type="text" class="form-group form-control" 
+                        name="rusername" id="username" placeholder="Username" />
+                        <input type="password" class="form-group form-control" 
+                        name="rpassword" id="password" placeholder="Password" />
+                        <button class="btn btn-success form-group form-control" type="submit">Register</button>
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

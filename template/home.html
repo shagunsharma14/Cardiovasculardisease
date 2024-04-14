@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+    <head>
+        <style>
+            h1,h3,h4 {text-align: center;}
+            </style>
+        <title>Home Page</title>
+        <link href="{% static 'bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="{%static 'css/style.css' %}">
+        <style>
+            #imghome {
+                background-image: url("{% static 'Home.jpeg' %}");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .spacer {
+                height: 20px; /* Adjust the height as needed */
+            }
+        </style>
+        </head>
+        <body id="imghome">
+    <body class="bg-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-6">
+                    <h1>Home Page</h1><br>
+                    <h3>Patient Details</h3>
+                    <form action="/userdetails/" method="post">
+                        {% csrf_token %}
+                        <input type="number" class="form-group form-control" 
+                        name="hage" id="age" placeholder="Age" />
+                        <input type="number" class="form-group form-control" 
+                        name="hgender" id="gender" placeholder="Gender" />
+                        <input type="number" class="form-group form-control" 
+                        name="hheight" id="smoking" placeholder="Height" />
+                        <input type="number" class="form-group form-control" 
+                        name="hweight" id="fatigue" placeholder="Weight" />
+                        <input type="number" class="form-group form-control" 
+                        name="hsystolic" id="allergy" placeholder="Systolic BP" />
+                        <input type="number" class="form-group form-control" 
+                        name="hdiastolic" id="wheezing" placeholder="Diastolic BP" />
+                        <input type="number" class="form-group form-control" 
+                        name="hcholestrol" id="cough" placeholder="Cholestrol" />
+                        <input type="number" class="form-group form-control" 
+                        name="hglucose" id="alcohol" placeholder="Glucose" />
+                        <input type="number" class="form-group form-control" 
+                        name="hsmoke" id="dbreath" placeholder="Smoke" />
+                        <input type="number" class="form-group form-control" 
+                        name="halchohol" id="swallow" placeholder="Alchohol" />
+                        <input type="number" class="form-group form-control" 
+                        name="hactive" id="chest" placeholder="Physically active" />
+                        <button class="btn btn-success form-group form-control" type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col-4"><br><br>
+                    <div class="spacer"></div>
+                    <h4>User Insructions</h4>
+                    <p>1.Age: Age of the patient</p>
+                    <p>2.Gender: Male=2, Female=1</p>
+                    <p>3.Height: height in centimeters</p>
+                    <p>4.weight: Weight in kilograms</p>
+                    <p>5.Systolic BP: normal: less than 120(mm Hg) </p>
+                    <p>6.Diast0lic BP: normal less than 80(mm Hg)</p>
+                    <p>7.Cholestrol: Cholestrol level 1,2,3</p>
+                    <p>8.Glucose: Glucose level 1,2,3</p>
+                    <p>9.Smoking: Yes=1, No=0</p>
+                    <p>10.Alchohol consuming: Yes=1, No=0</p>
+                    <p>11.Physically Active: Yes=1, No=0</p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
